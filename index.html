@@ -36,15 +36,15 @@
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; }
         body { background-color: #f1f5f9; color: var(--text-dark); min-height: 100vh; padding-bottom: 70px; -webkit-tap-highlight-color: transparent; }
 
-        /* HEADER & TOP BAR */
+        /* HEADER CỐ ĐỊNH TÍCH HỢP THANH TIẾN ĐỘ THÔNG MINH GỌN ĐẸP */
         .top-navbar {
             background: linear-gradient(135deg, #0f766e, #0d9488, #0284c7);
             color: #fff;
-            padding: 12px 16px;
+            padding: 10px 16px 8px 16px;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
         }
         .navbar-content {
             max-width: 900px;
@@ -57,42 +57,43 @@
         .user-badge {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
         }
         .user-avatar {
-            width: 40px;
-            height: 40px;
+            width: 36px;
+            height: 36px;
             border-radius: 50%;
             background: rgba(255, 255, 255, 0.25);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 20px;
+            font-size: 18px;
+            flex-shrink: 0;
         }
         .user-info {
             display: flex;
             flex-direction: column;
-            line-height: 1.25;
+            line-height: 1.2;
         }
-        .user-name { font-weight: 800; font-size: 0.98rem; letter-spacing: 0.3px; }
-        .user-sub { font-size: 0.8rem; opacity: 0.9; }
+        .user-name { font-weight: 800; font-size: 0.92rem; letter-spacing: 0.2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 140px; }
+        .user-sub { font-size: 0.75rem; opacity: 0.9; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 140px; }
 
         .nav-right-tools {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 8px;
         }
         .timer-box {
             background: rgba(0, 0, 0, 0.25);
-            padding: 6px 14px;
-            border-radius: 20px;
+            padding: 4px 10px;
+            border-radius: 16px;
             display: flex;
             flex-direction: column;
             align-items: center;
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
-        .timer-label { font-size: 0.65rem; text-transform: uppercase; opacity: 0.85; font-weight: 600; }
-        .timer-val { font-size: 1.15rem; font-weight: 800; font-family: monospace; letter-spacing: 1px; }
+        .timer-label { font-size: 0.6rem; text-transform: uppercase; opacity: 0.85; font-weight: 600; }
+        .timer-val { font-size: 1.05rem; font-weight: 800; font-family: monospace; letter-spacing: 0.5px; }
         .timer-warning { background: #dc2626 !important; animation: blinkWarning 0.9s infinite alternate; }
         @keyframes blinkWarning { 0% { transform: scale(1); } 100% { transform: scale(1.05); } }
 
@@ -100,44 +101,45 @@
             background: linear-gradient(135deg, var(--accent-orange), var(--accent-orange-hover));
             color: #fff;
             border: none;
-            padding: 8px 18px;
-            border-radius: 20px;
+            padding: 7px 14px;
+            border-radius: 18px;
             font-weight: 800;
-            font-size: 0.92rem;
+            font-size: 0.85rem;
             cursor: pointer;
-            box-shadow: 0 4px 10px rgba(249, 115, 22, 0.35);
+            box-shadow: 0 3px 8px rgba(249, 115, 22, 0.35);
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 5px;
             transition: all 0.2s;
+            white-space: nowrap;
         }
-        .btn-top-submit:hover { transform: translateY(-1px); box-shadow: 0 6px 14px rgba(249, 115, 22, 0.45); }
+        .btn-top-submit:hover { transform: translateY(-1px); box-shadow: 0 5px 12px rgba(249, 115, 22, 0.45); }
 
-        /* PROGRESS BAR */
+        /* PROGRESS BAR TÍCH HỢP BÊN TRONG STICKY HEADER */
         .progress-wrapper {
             max-width: 900px;
-            margin: 12px auto 0 auto;
-            padding: 0 16px;
+            margin: 8px auto 0 auto;
+            padding: 0;
         }
         .progress-info {
             display: flex;
             justify-content: space-between;
-            font-size: 0.85rem;
+            font-size: 0.78rem;
             font-weight: 700;
-            color: #475569;
-            margin-bottom: 5px;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 4px;
         }
         .progress-bar-bg {
             width: 100%;
-            height: 8px;
-            background: #cbd5e1;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.25);
             border-radius: 10px;
             overflow: hidden;
         }
         .progress-bar-fill {
             height: 100%;
             width: 0%;
-            background: linear-gradient(90deg, #10b981, #06b6d4);
+            background: linear-gradient(90deg, #34d399, #38bdf8);
             transition: width 0.3s ease;
             border-radius: 10px;
         }
@@ -187,7 +189,7 @@
             color: #ffffff;
             padding: 16px 20px;
             border-radius: 14px;
-            margin: 24px 0 16px 0;
+            margin: 16px 0 16px 0;
             display: flex;
             align-items: center;
             gap: 14px;
@@ -311,7 +313,7 @@
         .quiz-img-container { text-align: center; margin: 12px 0; }
         .quiz-img { max-width: 60%; max-height: 380px; border-radius: 10px; border: 1px solid #e2e8f0; cursor: zoom-in; }
 
-        /* MODAL XÁC NHẬN NỘP BÀI (THEO ẢNH 2 & 5) */
+        /* MODAL XÁC NHẬN NỘP BÀI */
         .modal-overlay {
             display: none;
             position: fixed;
@@ -365,7 +367,7 @@
             box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
         }
 
-        /* MÀN HÌNH TỔNG KẾT ĐIỂM (THEO ẢNH 3) */
+        /* MÀN HÌNH TỔNG KẾT ĐIỂM */
         .result-summary-card {
             background: #ffffff;
             border-radius: 20px;
@@ -480,7 +482,7 @@
 </head>
 <body>
 
-    <!-- TOP NAVBAR CỐ ĐỊNH KHI LÀM BÀI -->
+    <!-- TOP NAVBAR CỐ ĐỊNH TÍCH HỢP THANH TIẾN ĐỘ THI -->
     <header class="top-navbar" id="top-navbar" style="display: none;">
         <div class="navbar-content">
             <div class="user-badge">
@@ -500,18 +502,18 @@
                 </button>
             </div>
         </div>
-    </header>
 
-    <!-- THANH TIẾN ĐỘ TIẾN TRÌNH LÀM BÀI -->
-    <div class="progress-wrapper" id="progress-wrapper" style="display: none;">
-        <div class="progress-info">
-            <span id="progress-count-text">0/0 câu</span>
-            <span id="progress-percent-text">0%</span>
+        <!-- THANH TIẾN ĐỘ THI ĐƯỢC TÍCH HỢP TRỰC TIẾP VÀO HEADER (CỐ ĐỊNH KHI TRƯỢT) -->
+        <div class="progress-wrapper" id="progress-wrapper">
+            <div class="progress-info">
+                <span id="progress-count-text">0/0 câu</span>
+                <span id="progress-percent-text">0%</span>
+            </div>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill" id="progress-bar-fill"></div>
+            </div>
         </div>
-        <div class="progress-bar-bg">
-            <div class="progress-bar-fill" id="progress-bar-fill"></div>
-        </div>
-    </div>
+    </header>
 
     <div class="container">
 
@@ -566,7 +568,7 @@
             </form>
         </div>
 
-        <!-- MÀN HÌNH TỔNG KẾT SAU KHI NỘP BÀI (MÔ PHỎNG THEO ẢNH 3) -->
+        <!-- MÀN HÌNH TỔNG KẾT SAU KHI NỘP BÀI -->
         <div id="result-view-container" style="display: none;">
             <div class="result-summary-card">
                 <div class="result-summary-title" id="res-score-overview">Đúng 0/0 câu</div>
@@ -606,7 +608,7 @@
 
     </div>
 
-    <!-- MODAL XÁC NHẬN NỘP BÀI (THEO ẢNH 2 & ẢNH 5) -->
+    <!-- MODAL XÁC NHẬN NỘP BÀI -->
     <div class="modal-overlay" id="submit-confirm-modal">
         <div class="modal-box">
             <div class="modal-icon">📝</div>
@@ -994,13 +996,12 @@
             btn.disabled = true;
             btn.innerHTML = `<span class="spinner-mini"></span> ĐANG VÀO PHÒNG THI...`;
 
-            // Gửi điểm danh chạy ngầm (Non-blocking fallback để không bao giờ làm gián đoạn học sinh)
+            // Gửi điểm danh chạy ngầm
             sendStartExamLogQuietly(sId, sName, sClass);
 
             // Mở giao diện thi
             document.getElementById("student-card").style.display = "none";
             document.getElementById("top-navbar").style.display = "block";
-            document.getElementById("progress-wrapper").style.display = "block";
             document.getElementById("quiz-content").style.display = "block";
 
             examStartTime = Date.now();
@@ -1120,7 +1121,7 @@
             }).catch(e => {});
         }
 
-        // MODAL XÁC NHẬN NỘP BÀI (ẢNH 2 & ẢNH 5)
+        // MODAL XÁC NHẬN NỘP BÀI
         function showSubmitConfirmModal() {
             if (isSubmitted || isSubmitting) return;
 
@@ -1264,14 +1265,13 @@
             isSubmitting = false;
             closeSubmitConfirmModal();
 
-            // Hiển thị màn hình tổng kết (Ảnh 3)
+            // Hiển thị màn hình tổng kết
             renderResultSummaryScreen(correctCount, wrongCount, spentMins, completionTimeStr, score10Scale);
         }
 
-        // RENDER MÀN HÌNH TỔNG KẾT & XEM LẠI ĐÁP ÁN (ẢNH 3)
+        // RENDER MÀN HÌNH TỔNG KẾT & XEM LẠI ĐÁP ÁN
         function renderResultSummaryScreen(correct, wrong, spentMins, spentTimeStr, finalScore) {
             document.getElementById("top-navbar").style.display = "none";
-            document.getElementById("progress-wrapper").style.display = "none";
             document.getElementById("quiz-content").style.display = "none";
 
             const resView = document.getElementById("result-view-container");
